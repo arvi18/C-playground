@@ -25,6 +25,7 @@ int stringToIntAndLoops(long long number) {
 
 }
 
+// approach 1 (reversed)
 // extracting digits from number using % and / and loops
 int extractDigits(long long number) {
     cout << "extractDigits `````````" << endl;
@@ -41,13 +42,30 @@ int extractDigits(long long number) {
 }
 
 
+
+// recursively calculating sum
+// sum(5431) = sum(543) + 1
+#include <cmath>
+int sum = 0;
+int recursively(int num) {
+    int numLength = int(to_string(num).length());
+    int firstDig = num / int(pow(10, numLength - 1));
+    int nextNum = num % int(pow(10, numLength - 1));
+    if (numLength <= 1) return firstDig;
+    sum += firstDig;
+    cout << sum << " " << firstDig << " " << nextNum << "\n";
+    return firstDig + recursively(nextNum);
+}
+
+
 int main() {
 
-    long long num;
+    int num;
     cin >> num;
 
     cout << endl << stringToIntAndLoops(num) << endl;
     cout << endl << extractDigits(num) << endl;
+    cout << "recursively `````````" << endl<< recursively(num) << endl;
 
     return 0;
 }

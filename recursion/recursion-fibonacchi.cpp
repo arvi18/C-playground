@@ -25,7 +25,7 @@ int fibonaccchi(int n) {
     if (n <= 0) return 0;
     if (n == 1)return 1;
     int currNum = fibonaccchi(n - 1) + fibonaccchi(n - 2);
-    return currNum;
+    return  currNum;
 }
 
 

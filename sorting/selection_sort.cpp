@@ -17,9 +17,9 @@ void selectionSort(int n, int arr[])
                 minIndexFromOneIteration = j;
             }
             swap(arr[minIndexFromOneIteration], arr[i]);
-            for (int i = 0; i < n; ++i)
+            for (int x = 0; x < n; ++x)
             {
-                cout  << " " << arr[i];
+                cout  << " " << arr[x];
             }
             cout << endl;
         }
@@ -36,7 +36,7 @@ int main()
 
     for (int i = 0; i < k; ++i)
     {
-        int temp ;
+        int temp;
         cin >> temp;
         arr[i] = temp;
     }
@@ -52,8 +52,4 @@ int main()
 
     return 0;
 }
-
-
-
-
 

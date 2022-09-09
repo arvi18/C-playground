@@ -9,17 +9,17 @@ const int N = 10;
 int arr[N];
 
 
-void printArray(int *arr, int n){
-    cout<<"[ ";
-    for(int i=0; i<n; i++){
-        cout<<arr[i]<<" ";
+void printArray(int *arr, int n) {
+    cout << "[ ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
-    
-    cout<<" ]"<<endl<<endl;
+
+    cout << " ]" << endl << endl;
 }
 
 void merge(int l, int r, int mid) {
-    cout<<"merge called for l="<<l<<", mid="<<mid<<", r="<<r<<endl;
+    cout << "merge called for l=" << l << ", mid=" << mid << ", r=" << r << endl;
     int l_size = mid - l + 1;
     int l_array[l_size + 1];
     int r_size = r - mid;
@@ -45,10 +45,10 @@ void merge(int l, int r, int mid) {
             r_index++;
         }
     }
-    cout<<"L_array for l_size="<<l_size<<endl;
+    cout << "L_array for l_size=" << l_size << endl;
     printArray(l_array, l_size);
 
-    cout<<"R_array for r_size="<<r_size<<endl;
+    cout << "R_array for r_size=" << r_size << endl;
     printArray(r_array, r_size);
 }
 
@@ -75,7 +75,7 @@ int main()
     }
     printArray(arr, k);
 
-    mergeSort(0, k-1);
+    mergeSort(0, k - 1);
 
     cout << "Sorted Array:";
     printArray(arr, k);

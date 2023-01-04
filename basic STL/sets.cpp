@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+
 using namespace std;
 
 
@@ -66,10 +67,7 @@ int main()
     for(auto &pair: m){
         cout<<pair.first<<" "<<pair.second<<endl;
     }
-
-
-
-
+        cout<<endl;
 
     return 0;
 }

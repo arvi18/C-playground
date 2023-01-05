@@ -52,8 +52,6 @@ void halfRightPyramidWithSameNumsInRows(int rows, int cols) {
 void pyramid(int rows, int cols) {
 	for (int i = 0; i < rows; i++) {
 		const int COL = 2 * cols + 1;
-		// cout << COL;
-
 		// space star space
 		//  4 1 4
 		//  3 3 3
@@ -80,11 +78,33 @@ void pyramid(int rows, int cols) {
 	}
 }
 
+void pyramidReversed(int rows, int cols) {
+	for (int i = rows-1; i >= 0; i--) {
+		const int COL = 2 * cols + 1;
+
+		// print stars
+		for (int j = i; j < cols; j++) {
+			cout << "   ";
+		}
+
+		// print spaces
+		for (int j = 2 * i + 1; j > 0 ; j--) {
+			cout << "*  ";
+		}
+
+		// print stars again
+		for (int j = i; j < cols; j++) {
+			cout << "  ";
+		}
+		cout << "\n";
+	}
+}
+
 int main()
 {
 	int rows, cols;
 	cin >> rows;
 	cin >> cols;
-	pyramid(rows, cols);
+	pyramidReversed(rows, cols);
 	return 0;
 }
